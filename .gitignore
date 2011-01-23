@@ -1,0 +1,6 @@
+.project
+.svn
+.svn/*
+*/.svn
+*/.svn/*
+*~
