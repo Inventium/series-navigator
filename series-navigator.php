@@ -25,9 +25,9 @@ function build_nav_link($k, $v) {
     }
     
     if (!$anchor) {
-        $link = "<a href=\"$url\"/>$v</a> $description";
+        $link = "<a href=\"$url\">$v</a> $description";
     } else {
-        $link = "<a href=\"$url\"/>$anchor</a> $description";
+        $link = "<a href=\"$url\">$anchor</a> $description";
     }
     return $link;
 }
@@ -40,11 +40,13 @@ function plugin_series_navigation() {
         return NULL;
     }
     $prev = build_nav_link('previous-plugin',"Prev");
+    
+    
     // One of these could point to Table of Contents
     //$home = build_nav_link('home',"Home");    
     //$end  = build_nav_link('end',"Home");    
            
-    $links .= "<table class=\"plugin-series\">";
+    $links  = "<table class=\"plugin-series\">";
     $links .= "<tr>";
     $links .= "<th>Previous plugin</th>";
     $links .= "<th>Next plugin</th>";
